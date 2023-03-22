@@ -1,0 +1,14 @@
+#chessboard-container {
+  height: 100%;
+  width: 100%;
+
+  .rows {
+    width: 100%;
+    display: flex;
+
+    .cell {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

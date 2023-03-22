@@ -1,0 +1,3 @@
+<div class="cell-container" [ngClass]="isEven ? 'even' : 'odd'" (click)="onClickCell()">
+  <div class="clicked" [ngClass]="{'player-1': tickedBy === 'Player_1', 'player-2' : tickedBy === 'Player_2'}"></div>
+</div>

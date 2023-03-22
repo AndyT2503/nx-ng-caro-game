@@ -1,0 +1,116 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #4b7fc461;
+  .scoreboard {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 200px 200px;
+    padding-top: 48px;
+  }
+
+  .player-info {
+    width: 120px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    .score {
+      margin-bottom: 16px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 120px;
+      height: 120px;
+      font-weight: 600;
+    }
+
+    .player-name {
+      padding: 8px;
+      font-size: 24px;
+
+      font-weight: 600;
+    }
+
+    
+    
+
+    &.player-1 {
+      border: 3px red solid;
+      color: red;
+      .player-name {
+        border-top: 2px red solid;
+      }
+      @keyframes player-1-animation {
+        from {
+          border: 3px rgb(247, 199, 199) solid;
+        }
+        to {
+          border: 3px red solid;
+        }
+      }
+      &.active {
+        animation: player-1-animation infinite 1s;
+      }
+    }
+
+    &.player-2 {
+      border: 3px #004795 solid;
+      color: #004795;
+      .player-name {
+        border-top: 2px #004795 solid;
+      }
+
+      @keyframes player-2-animation {
+        from {
+          border: 3px #9ecbff solid;
+        }
+        to {
+          border: 3px #004795 solid;
+        }
+      }
+      &.active {
+        animation: player-2-animation infinite 1s;
+      }
+    }
+  }
+
+  
+
+  .timer {
+    margin-top: 72px;
+    font-size: 48px;
+    .box {
+      background-color: white;
+      color: red;
+      border: 1px red solid;
+      width: 140px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .footer {
+    padding: 0 16px;
+    margin-top: auto;
+    margin-bottom: 16px;
+    #restart-btn {
+      cursor: pointer;
+      background-color: #238b23;
+      color: white;
+      font-weight: 600;
+      padding: 8px 0;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+
+      &:hover {
+        background-color: #0ba10b;
+      }
+    }
+  }
+}

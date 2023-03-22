@@ -1,0 +1,15 @@
+<div id="chessboard-container" #chessBoardContainer>
+  <ng-container *ngFor="let _ of [].constructor(rows); let rowIndex = index">
+    <div class="rows">
+      <ng-container
+        *ngFor="let _ of [].constructor(cols); let colIndex = index"
+      >
+        <div class="cell">
+          <ng-caro-game-cell
+            [coordinate]="{y: rowIndex, x: colIndex}"
+          ></ng-caro-game-cell>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>
