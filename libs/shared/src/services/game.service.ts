@@ -250,7 +250,7 @@ export class GameService {
 
   restartGame(): void {
     this.isPlaying = true;
-    this._playerPlaying = playerId.player1;
+    this.switchPlayerPlaying();
     this.resetTimer();
     this.cellTicked = {
       [playerId.player1]: [],

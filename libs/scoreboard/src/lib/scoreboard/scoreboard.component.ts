@@ -28,9 +28,11 @@ export class ScoreboardComponent implements OnInit {
   }
 
   subscribeNotifyHasWinningPlayer(): void {
-    this.gameService.notifyHasWinningPlayer$.pipe().subscribe(() => {
-      alert(`Player ${this.gameService.playerPlaying} win!!!`);
-      this.gameService.restartGame();
+    this.gameService.notifyHasWinningPlayer$.subscribe(() => {
+      setTimeout(() => {
+        alert(`Player ${this.gameService.playerPlaying} win!!!`);
+        this.gameService.restartGame();
+      }, 300);
     });
   }
 }
